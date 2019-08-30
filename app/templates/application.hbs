@@ -1,5 +1,11 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
 
+<h1>Litmus Email Test</h1>
+<div>
+		{{#each this.model.devices as |device|}}
+			<b>{{device.ApplicationName}}</b>
+            <br>
+            <img src="https://{{device.FullpageImage}}">
+            <br><br>
+		{{/each}}
+</div>
 {{outlet}}
